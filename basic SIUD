@@ -1,0 +1,14 @@
+-- Inserting a new product into the Products table
+INSERT INTO Products (productName, price, description, stock, categoryID) 
+VALUES ('Sample Product', 9.99, 'This is a sample product description.', 100, 1);
+
+-- Selecting all products from the Products table
+SELECT * FROM Products;
+
+-- Updating the description and price of the product that was just inserted
+UPDATE Products 
+SET description = 'Updated product description.', price = 12.99 
+WHERE productName = 'Sample Product';
+
+-- Deleting the product that was just inserted and updated
+DELETE FROM Products WHERE productName = 'Sample Product';
